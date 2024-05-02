@@ -20,11 +20,14 @@ def time():
     speak(Time)
     print("The current time is ", Time)
 
+def test():
+    print("hello")
+
 def date():
     day = int(datetime.datetime.now().day)
     month = int(datetime.datetime.now().month)
     year = int(datetime.datetime.now().year)
-    speak("the current date is")
+    speak("Jai Shree Ram, the current date is")
     speak(day)
     speak(month)
     speak(year)
