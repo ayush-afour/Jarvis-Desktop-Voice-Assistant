@@ -14,6 +14,9 @@ def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
+def test():
+    print("Test")
+
 def time():
     Time = datetime.datetime.now().strftime("%I:%M:%S")
     speak("the current time is")
