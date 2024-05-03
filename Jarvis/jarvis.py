@@ -16,19 +16,19 @@ def speak(audio):
 
 def time():
     Time = datetime.datetime.now().strftime("%I:%M:%S")
+    print("The current time is " + Time)
     speak("the current time is")
     speak(Time)
-    print("The current time is ", Time)
 
 def date():
     day = int(datetime.datetime.now().day)
     month = int(datetime.datetime.now().month)
     year = int(datetime.datetime.now().year)
+    print("The current date is " + str(day) + "/" + str(month) + "/" + str(year))
     speak("Jai Shree Ram, the current date is")
     speak(day)
     speak(month)
     speak(year)
-    print("The current date is " + str(day) + "/" + str(month) + "/" + str(year))
 
 def wishme():
     print("Welcome back sir!!")
@@ -36,15 +36,16 @@ def wishme():
     
     hour = datetime.datetime.now().hour
     if hour >= 4 and hour < 12:
-        speak("Good Morning Sir!!")
         print("Good Morning Sir!!")
+        speak("Good Morning Sir!!")
     elif hour >= 12 and hour < 16:
-        speak("Good Afternoon Sir!!")
         print("Good Afternoon Sir!!")
+        speak("Good Afternoon Sir!!")
     elif hour >= 16 and hour < 24:
-        speak("Good Evening Sir!!")
         print("Good Evening Sir!!")
+        speak("Good Evening Sir!!")
     else:
+        print("Good Night Sir, See You Tommorrow")
         speak("Good Night Sir, See You Tommorrow")
 
     speak("Jarvis at your service sir, please tell me how may I help you.")
@@ -54,6 +55,7 @@ def screenshot():
     img = pyautogui.screenshot()
     img_path = os.path.expanduser("~\\Pictures\\ss.png")
     img.save(img_path)
+    print("Screenshot taken")
 
 
 def takecommand():
@@ -66,7 +68,7 @@ def takecommand():
     try:
         print("Recognizing...")
         query = r.recognize_google(audio, language="en-in")
-        print(query)
+        print("You said: " + query)
 
     except Exception as e:
         print(e)
@@ -79,6 +81,7 @@ if __name__ == "__main__":
     wishme()
     while True:
         query = takecommand().lower()
+        print("You said: " + query)
         if "time" in query:
             time()
 
@@ -149,16 +152,16 @@ if __name__ == "__main__":
         elif "remember that" in query:
             speak("What should I remember")
             data = takecommand()
+            print("You said me to remember that " + data)
             speak("You said me to remember that" + data)
-            print("You said me to remember that " + str(data))
             remember = open("data.txt", "w")
             remember.write(data)
             remember.close()
 
         elif "do you remember anything" in query:
             remember = open("data.txt", "r")
-            speak("You told me to remember that" + remember.read())
             print("You told me to remember that " + str(remember))
+            speak("You told me to remember that" + remember.read())
 
         elif "screenshot" in query:
             screenshot()
@@ -193,3 +196,4 @@ def max_number(numbers):
 
 def min_number(numbers):
     return min(numbers)
+
