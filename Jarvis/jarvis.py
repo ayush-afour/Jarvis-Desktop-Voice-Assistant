@@ -24,7 +24,7 @@ def date():
     day = int(datetime.datetime.now().day)
     month = int(datetime.datetime.now().month)
     year = int(datetime.datetime.now().year)
-    speak("the current date is")
+    speak("Jai Shree Ram, the current date is")
     speak(day)
     speak(month)
     speak(year)
@@ -90,7 +90,7 @@ if __name__ == "__main__":
             print("I'm JARVIS created by Mr. Kishan and I'm a desktop voice assistant.")
 
         elif "how are you" in query:
-            speak("I'm fine sir, What about you?")
+            speak("I'm fine sir")
             print("I'm fine sir, What about you?")
 
         elif "fine" in query:
@@ -168,4 +168,28 @@ if __name__ == "__main__":
         elif "offline" in query:
             quit()
 
+def add_numbers(a, b):
+    return a + b
 
+def multiply_numbers(a, b):
+    return a * b
+
+def calculate_average(numbers):
+    total = sum(numbers)
+    average = total / len(numbers)
+    return average
+
+def subtract_numbers(a, b):
+    return a - b
+
+def divide_numbers(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Cannot divide by zero"
+
+def max_number(numbers):
+    return max(numbers)
+
+def min_number(numbers):
+    return min(numbers)
