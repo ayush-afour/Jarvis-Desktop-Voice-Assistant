@@ -17,7 +17,7 @@ def speak(audio):
 def time():
     Time = datetime.datetime.now().strftime("%I:%M:%S")
     print("The current time is " + Time)
-    speak("Jai Shree Ram, the current time is")
+    speak("the current time is")
     speak(Time)
 
 def date():
