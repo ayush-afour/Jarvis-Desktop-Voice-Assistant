@@ -191,7 +191,5 @@ def divide_numbers(a, b):
     else:
         return "Cannot divide by zero"
 
-def max_number(numbers):
-    return max(numbers)
-
-
+def min_numbers(numbers):
+    return min(numbers)
