@@ -17,7 +17,7 @@ def speak(audio):
 def time():
     Time = datetime.datetime.now().strftime("%I:%M:%S")
     print("The current time is " + Time)
-    speak("the current time is")
+    speak("Test the current time is")
     speak(Time)
 
 def date():
@@ -194,6 +194,4 @@ def divide_numbers(a, b):
 def max_number(numbers):
     return max(numbers)
 
-def min_number(numbers):
-    return min(numbers)
 
