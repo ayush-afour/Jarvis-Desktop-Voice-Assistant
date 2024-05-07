@@ -25,7 +25,7 @@ def date():
     month = int(datetime.datetime.now().month)
     year = int(datetime.datetime.now().year)
     print("The current date is " + str(day) + "/" + str(month) + "/" + str(year))
-    speak("Jai Shree Ram, the current date is")
+    speak("The current date is")
     speak(day)
     speak(month)
     speak(year)
