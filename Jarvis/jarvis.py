@@ -184,6 +184,7 @@ def calculate_average(numbers):
 
 def subtract_numbers(a, b):
     print("Nice")
+    print("Good")
     return a - b
 
 def divide_numbers(a, b):
